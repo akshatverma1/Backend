@@ -26,7 +26,9 @@ io.on("connection",function(socket){
         io.emit("user-disconnected",socket.id);
     });
 })
-
+app.get("/akshat",(req,res)=>{
+    res.send("Akshat is Live");
+})
 
 app.get("/",(req,res)=>{
     res.render("index");
