@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express =  require("express");
 const app = express();
 const path = require("path");
@@ -13,7 +14,7 @@ const io = socketio(SocketServer);
 
 
 
-SocketServer.listen(3000,()=>{
+SocketServer.listen(process.env.PORT,()=>{
     console.log("Server Is ON");
 })
 
